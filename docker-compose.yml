@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  demoblue.web:
+    image: ${DOCKER_REGISTRY-}demo/demoblue.web
+    build:
+      context: .
+      dockerfile: src/DemoBlue.Web/Dockerfile
+
+  demogreen.web:
+    image: ${DOCKER_REGISTRY-}demo/demogreen.web
+    build:
+      context: .
+      dockerfile: src/DemoGreen.Web/Dockerfile
+
