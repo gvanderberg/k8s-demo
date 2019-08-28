@@ -1,4 +1,6 @@
-﻿@{
+﻿@model DemoGreen.Web.Models.HomeIndexViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -7,27 +9,57 @@
     <div class="card-body text-primary">
         <form>
             <div class="form-group row mb-0">
+                <label class="col-sm-4 col-form-label-sm" for="host">Host</label>
+                <div class="col-sm-8">
+                    <input class="form-control-plaintext form-control-sm" id="host" type="text" value="@Model.Host" />
+                </div>
+            </div>
+            <div class="form-group row mb-0">
+                <label class="col-sm-4 col-form-label-sm" for="userAgent">User Agent</label>
+                <div class="col-sm-8">
+                    <input class="form-control-plaintext form-control-sm" id="userAgent" type="text" value="@Model.UserAgent" />
+                </div>
+            </div>
+            <div class="form-group row mb-0">
+                <label class="col-sm-4 col-form-label-sm" for="accept">Accept</label>
+                <div class="col-sm-8">
+                    <input class="form-control-plaintext form-control-sm" id="accept" type="text" value="@Model.Accept" />
+                </div>
+            </div>
+            <div class="form-group row mb-0">
+                <label class="col-sm-4 col-form-label-sm" for="acceptEncoding">Accept Encoding</label>
+                <div class="col-sm-8">
+                    <input class="form-control-plaintext form-control-sm" id="acceptEncoding" type="text" value="@Model.AcceptEncoding" />
+                </div>
+            </div>
+            <div class="form-group row mb-0">
+                <label class="col-sm-4 col-form-label-sm" for="acceptLanguage">Accept Language</label>
+                <div class="col-sm-8">
+                    <input class="form-control-plaintext form-control-sm" id="acceptLanguage" type="text" value="@Model.AcceptLanguage" />
+                </div>
+            </div>
+            <div class="form-group row mb-0">
                 <label class="col-sm-4 col-form-label-sm" for="machineName">Machine</label>
                 <div class="col-sm-8">
-                    <input class="form-control-plaintext form-control-sm" id="machineName" type="text" value="@Environment.MachineName" />
+                    <input class="form-control-plaintext form-control-sm" id="machineName" type="text" value="@Model.HostName" />
                 </div>
             </div>
             <div class="form-group row mb-0">
                 <label class="col-sm-4 col-form-label-sm" for="osVersion">OS Version</label>
                 <div class="col-sm-8">
-                    <input class="form-control-plaintext form-control-sm" id="osVersion" type="text" value="@Environment.OSVersion" />
+                    <input class="form-control-plaintext form-control-sm" id="osVersion" type="text" value="@Model.OSVersion" />
                 </div>
             </div>
             <div class="form-group row mb-0">
                 <label class="col-sm-4 col-form-label-sm" for="processorCount">Processor</label>
                 <div class="col-sm-8">
-                    <input class="form-control-plaintext form-control-sm" id="processorCount" type="text" value="@Environment.ProcessorCount" />
+                    <input class="form-control-plaintext form-control-sm" id="processorCount" type="text" value="@Model.ProcessorCount" />
                 </div>
             </div>
             <div class="form-group row mb-0">
                 <label class="col-sm-4 col-form-label-sm" for="currentDirectory">CurrentDirectory</label>
                 <div class="col-sm-8">
-                    <input class="form-control-plaintext form-control-sm" id="currentDirectory" type="text" value="@Environment.CurrentDirectory" />
+                    <input class="form-control-plaintext form-control-sm" id="currentDirectory" type="text" value="@Model.CurrentDirectory" />
                 </div>
             </div>
         </form>

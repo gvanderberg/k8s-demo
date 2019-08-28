@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using System.Diagnostics;
 using DemoGreen.Web.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DemoGreen.Web.Controllers
 {
@@ -12,7 +8,9 @@ namespace DemoGreen.Web.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var vm = new HomeIndexViewModel(HttpContext);
+
+            return View(vm);
         }
 
         public IActionResult Privacy()
